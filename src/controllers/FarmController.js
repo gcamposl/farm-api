@@ -4,12 +4,12 @@ const farmRoutes = Router();
 
 const farms = [];
 
-farmRoutes.get('/farm', (request, response) => {
+farmRoutes.get(process.env.FARMROUTE, (request, response) => {
   //   const { name } = request.body;
   return response.status(200).json(farms);
 });
 
-farmRoutes.get('/farm/id', (request, response) => {
+farmRoutes.get(process.env.FARMROUTEPARAMS, (request, response) => {
   const id = request.params;
   const { name } = request.body;
 
@@ -19,7 +19,7 @@ farmRoutes.get('/farm/id', (request, response) => {
   return response.status(200).json(farms);
 });
 
-farmRoutes.post('/farm', (request, response) => {
+farmRoutes.post(process.env.FARMROUTE, (request, response) => {
   const { name } = request.body;
   console.log(name);
   if (name) {
@@ -30,7 +30,7 @@ farmRoutes.post('/farm', (request, response) => {
   return response.status(201).json({ farms });
 });
 
-farmRoutes.put('/farm', (request, response) => {
+farmRoutes.put(process.env.FARMROUTEPARAMS, (request, response) => {
   const { name } = request.body;
   console.log(name);
   if (farms.name == name) {
@@ -38,10 +38,10 @@ farmRoutes.put('/farm', (request, response) => {
   } else {
     return response.status(404).json({ Message: 'Nao foi encontrado o nome' });
   }
-  return response.status(201).json({ farms });
+  return response.status(200).json({ farms });
 });
 
-farmRoutes.delete('/farm/id', (request, response) => {
+farmRoutes.delete(process.env.FARMROUTEPARAMS, (request, response) => {
   const { name } = request.body;
   console.log(name);
   if (farms.name == name) {
@@ -49,7 +49,7 @@ farmRoutes.delete('/farm/id', (request, response) => {
   } else {
     return response.status(404).json({ Message: 'Nao foi encontrado o nome' });
   }
-  return response.status(201).json({ farms });
+  return response.status(200).json({ farms });
 });
 
 module.exports = { farmRoutes };

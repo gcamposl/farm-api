@@ -4,15 +4,15 @@ const animalRoutes = Router();
 
 const animals = [];
 
-animalRoutes.get('/animal', (request, response) => {
+animalRoutes.get(process.env.ANIMALROUTE, (request, response) => {
   return response.status(200).json(animals);
 });
 
-animalRoutes.get('/animal/id', (request, response) => {
+animalRoutes.get(process.env.ANIMALROUTEPARAMS, (request, response) => {
   return response.status(200).json(animals);
 });
 
-animalRoutes.post('/animal', (request, response) => {
+animalRoutes.post(process.env.ANIMALROUTE, (request, response) => {
   const { name } = request.body;
 
   animals.push({ name });
@@ -20,11 +20,11 @@ animalRoutes.post('/animal', (request, response) => {
   return response.status(201).json(animals);
 });
 
-animalRoutes.put('/animal/id', (request, response) => {
+animalRoutes.put(process.env.ANIMALROUTEPARAMS, (request, response) => {
   // fazer
 });
 
-animalRoutes.delete('/animal/id', (request, response) => {
+animalRoutes.delete(process.env.ANIMALROUTEPARAMS, (request, response) => {
   const animalId = request.params;
 
   // if
