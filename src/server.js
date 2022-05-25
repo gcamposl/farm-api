@@ -10,4 +10,4 @@ app.use(express.json());
 
 app.use(farmRoutes);
 
-app.listen(3334, () => console.log('server is runnig'));
+app.listen(8080, () => console.log('server is runnig'));
