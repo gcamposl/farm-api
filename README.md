@@ -2,15 +2,16 @@
 
 - Um "simples" crud API Rest utilizando todas as seguintes tecnologias:
 
-[x] npm 8.1.2
-[x] node 16.13.2
-[x] javascript ES6
-[x] DDD
-[x] SOLID
-[x] Docker e docker-compose
-[x] Postgres
-[x] Swagger
-[x] Tests unitários com Jest 
+- [x] npm 8.1.2
+- [x] node 16.13.2
+- [x] javascript ES6
+- [x] DDD - Domain Driven Design
+- [x] SOLID
+- [x] Docker e docker-compose
+- [x] Postgres
+- [x] Swagger
+- [x] Tests unitários com Jest
+- [] ?Algum service cloud... 
 
 ## Banco de Dados Postgress
 
