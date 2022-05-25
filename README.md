@@ -1,4 +1,4 @@
-# farmAPI (em desenvolvimento... ⚙️ )
+# farmAPI (em desenvolvimento... ⚙️)
 
 - Um "simples" crud API Rest utilizando todas as seguintes tecnologias:
 
