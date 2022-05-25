@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres
+    container_name: database_farm
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=farm
+      - POSTGRES_PASSWORD=farm123
+      - POSTGRES_DB=farmdb
+    volumes:
+      - pgdata:/data/postgres
+
+volumes: 
+  pgdata:
+    driver: local
