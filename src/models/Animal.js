@@ -1,4 +1,4 @@
-const { v4: uuid4 } = require('uuid');
+import { v4 as uuid4 } from 'uuid';
 
 class Animal {
   id;
@@ -11,4 +11,4 @@ class Animal {
   }
 }
 
-module.exports = Animal;
+export default { Animal };

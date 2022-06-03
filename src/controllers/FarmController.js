@@ -1,7 +1,7 @@
-const { Router } = require('express');
-const dotenv = require('dotenv');
+import { Router } from 'express';
+import dotenv from 'dotenv';
 
-const farmRoutes = Router();
+export const farmRoutes = Router();
 
 dotenv.config({ path: './.env' });
 
@@ -54,5 +54,3 @@ farmRoutes.delete(process.env.FARM_ROUTE_PARAMS, (request, response) => {
   //   }
   return response.status(200).json({ farms });
 });
-
-module.exports = { farmRoutes };

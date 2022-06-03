@@ -1,8 +1,8 @@
-const express = require('express');
+import express from 'express';
 // const { v4: uuid4 } = require('uuid');
 
 //const router = require('./controllers');
-const { farmRoutes } = require('./controllers/FarmController');
+import { farmRoutes } from './controllers/FarmController.js';
 
 const app = express();
 

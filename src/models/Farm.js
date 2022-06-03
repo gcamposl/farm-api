@@ -13,4 +13,4 @@ class Farm {
   }
 }
 
-module.exports = Farm;
+export default { Farm };

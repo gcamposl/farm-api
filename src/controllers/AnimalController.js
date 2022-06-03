@@ -1,6 +1,6 @@
-const { Router } = require('express');
+import { Router } from 'express';
 
-const animalRoutes = Router();
+export const animalRoutes = Router();
 
 const animals = [];
 
