@@ -1,13 +1,11 @@
 import express from 'express';
-// const { v4: uuid4 } = require('uuid');
+import { farmRoutes } from './routes/farm.routes.js';
 
-//const router = require('./controllers');
-import { farmRoutes } from './controllers/FarmController.js';
-
+const port = 8000;
 const app = express();
 
 app.use(express.json());
 
 app.use(farmRoutes);
 
-app.listen(8080, () => console.log('server is runnig'));
+app.listen(port, () => console.log(`server is runnig on ${port}`));
