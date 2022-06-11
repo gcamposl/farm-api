@@ -1,7 +1,7 @@
 import express from 'express';
 import { farmRoutes } from './routes/farm.routes.js';
 
-const port = 8000;
+const port = 3334;
 const app = express();
 
 app.use(express.json());
