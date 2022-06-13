@@ -1,15 +1,16 @@
-const { v4: uuid4 } = require('uuid');
+import { v4 as uuid4 } from 'uuid';
 
 class Farm {
-  id;
-  name;
-  size;
+  far_id;
+  far_name;
+  far_size;
   created_at;
 
   constructor() {
-    if (!this.id) {
-      this.id = uuid4();
-    }
+    this.far_id = uuid4();
+    this.far_name = '';
+    this.far_size = 0;
+    this.created_at = Date.now();
   }
 }
 
