@@ -1,6 +1,8 @@
 import { pool } from '../database/index.js';
 
-class CreateFarmRepository {
+export class CreateFarmRepository {
+  constructor() {}
+
   async createFarm(farm) {
     try {
       await pool.query(
@@ -18,5 +20,3 @@ class CreateFarmRepository {
     }
   }
 }
-
-export default CreateFarmRepository;

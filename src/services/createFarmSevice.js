@@ -1,10 +1,13 @@
-import { createFarm } from '../repositories/createFarmRepository.js';
+import { CreateFarmRepository } from '../repositories/createFarmRepository.js';
 
-function handleCreateFarm(data) {
-  if (data == 'teste') {
+async function handleCreateFarm(farm) {
+  const farmRepository = new CreateFarmRepository();
+
+  if (!farm) {
     return false;
   } else {
-    const farm = createFarm(data);
+    const farm = await farmRepository.createFarm(farmRepository);
+    return farm;
   }
 }
 
