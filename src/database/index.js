@@ -1,14 +1,11 @@
-import { Pool } from 'pg';
-import dotenv from 'dotenv';
+import pgp from 'pg-promise';
 
-dotenv.config({ path: './.env' });
-
-const pool = new Pool({
-  user: process.env.PG_USER,
-  host: process.env.PG_HOST,
-  password: process.env.PG_PASSWORD,
-  database: process.env.PG_DATABASE,
-  port: process.env.PG_PORT,
+const db = pgp({
+  user: 'farm',
+  host: 'localhost',
+  password: 'farm123',
+  database: 'farmdb',
+  port: 5432,
 });
 
-export default { pool };
+export default db;
