@@ -1,11 +1,10 @@
-import pgp from 'pg-promise';
+import pg from 'pg';
+const Client = pg.Client;
 
-const db = pgp({
+export const client = new Client({
   user: 'farm',
   host: 'localhost',
   password: 'farm123',
   database: 'farmdb',
   port: 5432,
 });
-
-export default db;

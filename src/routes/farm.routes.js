@@ -1,10 +1,12 @@
 import { Router } from 'express';
-import handleCreateFarm from '../services/createFarmSevice.js';
+import { handleCreateFarm } from '../services/createFarmSevice.js';
+import { FarmDTO } from '../model/dto/FarmDTO.js';
 
 export const farmRoutes = Router();
 
 farmRoutes.post('/farm', (request, response) => {
-  const farm = request.body;
+  const { far_name, far_size } = request.body;
+  let farm = new FarmDTO(far_name, far_size);
   const insertFarm = handleCreateFarm(farm);
   if (!insertFarm) {
     return response.status(404).send();
