@@ -10,7 +10,7 @@ export class CreateFarmRepository {
         `INSERT INTO farm 
             (far_id, far_name, far_size, created_at) 
         VALUES 
-            (${farm.far_id}, ${farm.far_name}, ${farm.far_size}, ${farm.created_at})`,
+            (${farm.farmId}, ${farm.farmName}, ${farm.farmSize}, ${farm.createdAt})`,
         (err, res) => {
           console.log(err, res);
           client.end();

@@ -5,8 +5,8 @@ import { FarmDTO } from '../model/dto/FarmDTO.js';
 export const farmRoutes = Router();
 
 farmRoutes.post('/farm', (request, response) => {
-  const { far_name, far_size } = request.body;
-  let farm = new FarmDTO(far_name, far_size);
+  const { farmName, farmSize } = request.body;
+  let farm = new FarmDTO(farmName, farmSize);
   const insertFarm = handleCreateFarm(farm);
   if (!insertFarm) {
     return response.status(404).send();
